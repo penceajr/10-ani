@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090909"><meta name="robots" content="noindex,nofollow,noarchive">
+<title>10 ANI ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100svh;background:#090909;color:#f7f2eb;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;display:grid;place-items:center;padding:28px}.card{width:min(92vw,430px);text-align:center}.eyebrow{font-size:12px;letter-spacing:.28em;opacity:.55;margin-bottom:14px}.title{font-family:Georgia,serif;font-size:46px;font-weight:400;margin:0 0 38px}.wave{width:100%;height:92px;filter:invert(1);opacity:.88;object-fit:contain;margin-bottom:36px}.play{appearance:none;border:1px solid rgba(255,255,255,.35);background:#f7f2eb;color:#111;border-radius:999px;padding:17px 34px;font-size:15px;font-weight:700;letter-spacing:.12em;min-width:190px;box-shadow:0 8px 35px rgba(0,0,0,.25)}.play:active{transform:scale(.98)}.time{font-variant-numeric:tabular-nums;font-size:12px;opacity:.45;margin-top:15px;height:16px}.footer{margin-top:54px;font-family:Georgia,serif;font-size:15px;letter-spacing:.12em;opacity:.58}.hint{font-size:11px;opacity:.28;margin-top:9px}audio{display:none}
+</style></head>
+<body><main class="card"><div class="eyebrow">DOAR PENTRU TINE</div><h1 class="title">10 ANI ❤️</h1><img class="wave" src="waveform.svg" alt="Forma undei sonore a mesajului"><button class="play" id="play">▶ ASCULTĂ</button><div class="time" id="time"></div><div class="footer">C &amp; R · 2016–2026</div><div class="hint">un mesaj păstrat în timp</div><audio id="audio" preload="metadata" src="mesaj.mp3"></audio></main>
+<script>
+const a=document.getElementById('audio'),b=document.getElementById('play'),t=document.getElementById('time');
+const fmt=s=>{if(!isFinite(s))return '';const m=Math.floor(s/60),x=Math.floor(s%60);return m+':'+String(x).padStart(2,'0')};
+b.onclick=async()=>{if(a.paused){await a.play();b.textContent='❚❚ PAUZĂ'}else{a.pause();b.textContent='▶ ASCULTĂ'}};
+a.addEventListener('timeupdate',()=>t.textContent=fmt(a.currentTime)+'  /  '+fmt(a.duration));
+a.addEventListener('ended',()=>{b.textContent='↻ ASCULTĂ DIN NOU';t.textContent=''});
+</script></body></html>
